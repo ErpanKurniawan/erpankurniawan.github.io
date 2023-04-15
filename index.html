@@ -11,6 +11,7 @@
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
+
   <body id="home">
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary shadow-lg">
       <div class="container">
@@ -41,7 +42,7 @@
     <div class="jumbotron text-center">
       <img src="img/photo.png" alt="Erpan Kurniawan" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-5 mt-3">ERPAN KURNIAWAN</h1>
-      <p class="lead">WEB DEVELOPER</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -61,15 +62,13 @@
         </div>
         <div class="row justify-content-evenly fs-5 text-center">
           <div class="col-md-4" data-aos="fade-right" data-aos-delay="50">
-            <p>
-              Hallo nama Erpan Kurniawan, lulusan Teknik Informatika Universitas Pamulang. Saya memiliki kondisi kesehatan dan kemampuan komunikasi yang baik, loyalitas tinggi, cepat memahami bidang baru dan public speaking yang baik
-              melalui pengalaman organisasi, serta memiliki semangat belajar yang besar dan bertanggung jawab dengan pekerjaan.
-            </p>
+            <p>Hallo nama Erpan Kurniawan, lulusan Teknik Informatika Universitas Pamulang. Saya memiliki kondisi kesehatan dan kemampuan komunikasi yang baik, loyalitas tinggi,</p>
           </div>
           <div class="col-md-4" data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000">
-            <div class="card">
+            <p>cepat memahami bidang baru dan public speaking yang baik melalui pengalaman organisasi, serta memiliki semangat belajar yang besar dan bertanggung jawab dengan pekerjaan.</p>
+            <!-- <div class="card">
               <img src="img/Curriculum.png" class="" alt="Curriculum" />
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -127,12 +126,30 @@
       </svg>
     </section>
 
+    <!-- Galery jadi CV-->
+    <section id="gallery">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>CV</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <a href="">
+              <img src="img/Curriculum.png" alt="Curriculum" class="img-fluid gallery-img" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Galery -->
     <section id="gallery">
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>Gallery</h2>
+            <h2>Galery</h2>
           </div>
         </div>
         <div class="row justify-content-center">
@@ -286,10 +303,18 @@
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <!-- GSAP WEB DEVELOVER -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
     <script>
+      // GSAP WEB DEVELOVER
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 2, delay: 1.5, text: "Web Developer" });
+      // GSAP jumbutron
       gsap.from(".jumbotron img", { duration: 1, rotateY: 360, opacity: 0 });
+      // GSAP navbar
       gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
-      gsap.from(".display-4", { duration: 1, x: "-100%", opacity: 0, ease: "bounce" });
+      // GSAP Text nama
+      gsap.from(".display-5", { duration: 1, x: "-50%", opacity: 0, ease: "bback", delay: 0.5 });
     </script>
   </body>
 </html>
